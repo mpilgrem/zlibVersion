@@ -1,0 +1,42 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 566342e913e412bbfe60bd4fe4455e055ee7c8207be284883ebed6f8890438cb
+
+name:           zlibVersion
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/mpilgrem/zlibVersion#readme>
+homepage:       https://github.com/mpilgrem/zlibVersion#readme
+bug-reports:    https://github.com/mpilgrem/zlibVersion/issues
+author:         Mike Pilgrem
+maintainer:     public@pilgrem.com
+copyright:      Copyright 2020 Mike Pilgrem
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/mpilgrem/zlibVersion
+
+executable zlibVersion
+  main-is: Main.hs
+  other-modules:
+      Paths_zlibVersion
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  extra-lib-dirs:
+      lib
+  extra-libraries:
+      zlib1
+  build-depends:
+      base >=4.7 && <5
+    , directory
+  default-language: Haskell2010

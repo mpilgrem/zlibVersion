@@ -1,2 +1,2 @@
 # zlibVersion
- A tool to report the version of a zlib1.dll file
+A tool to report the version of a zlib1.dll file
