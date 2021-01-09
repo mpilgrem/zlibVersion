@@ -1,27 +1,28 @@
 name:                zlibVersion
-version:             0.1.0.0
+version:             0.2.0.0
 github:              "mpilgrem/zlibVersion"
 license:             BSD3
 author:              "Mike Pilgrem"
 maintainer:          "public@pilgrem.com"
-copyright:           "Copyright 2020 Mike Pilgrem"
+copyright:           "Copyright 2020 and 2021 Mike Pilgrem"
 
 extra-source-files:
 - README.md
 - ChangeLog.md
 
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
-
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/mpilgrem/zlibVersion#readme>
+
+ghc-options:
+- -Weverything
+- -Wno-implicit-prelude
 
 dependencies:
 - base >= 4.7 && < 5
+- bytestring
 - directory
+- optparse-applicative
+- portable-lines
+- typed-process
 
 # In order for `stack build` to work, a copy of zlib1.dll must be able to be
 # located. If `stack build` does not work, add a copy of zlib1.dll to the

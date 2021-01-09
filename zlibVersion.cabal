@@ -4,16 +4,16 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 566342e913e412bbfe60bd4fe4455e055ee7c8207be284883ebed6f8890438cb
+-- hash: 76daca3cb2c00cee55252bf10be4d79394a4a7b1bbc0eefcfeef558ceb97a901
 
 name:           zlibVersion
-version:        0.1.0.0
+version:        0.2.0.0
 description:    Please see the README on GitHub at <https://github.com/mpilgrem/zlibVersion#readme>
 homepage:       https://github.com/mpilgrem/zlibVersion#readme
 bug-reports:    https://github.com/mpilgrem/zlibVersion/issues
 author:         Mike Pilgrem
 maintainer:     public@pilgrem.com
-copyright:      Copyright 2020 Mike Pilgrem
+copyright:      Copyright 2020 and 2021 Mike Pilgrem
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -31,12 +31,16 @@ executable zlibVersion
       Paths_zlibVersion
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Weverything -Wno-implicit-prelude -threaded -rtsopts -with-rtsopts=-N
   extra-lib-dirs:
       lib
   extra-libraries:
       zlib1
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , directory
+    , optparse-applicative
+    , portable-lines
+    , typed-process
   default-language: Haskell2010
